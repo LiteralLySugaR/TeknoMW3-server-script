@@ -1,0 +1,299 @@
+==========================================
+ver: GPI 14.0.3M (the biggest one for the December)
+-------
+changes:
+
+1. Added console logging + (.txt) logging		//They are pretty same but in different places
+2. Added commands: !hban, !ipban, !dban, !unban, !pm, !tpt, !vote + !y + !n, !slot
+3. Edited format of !tempban (!tb)
+4. Added TriggerKill on some maps.
+5. Added groups: StaffMod, Friend
+6. Added HudElem.
+7. Added Anti-RageQuit system.				//it cant be fixed but it work even when you get kicked as infected. (17.12.20)
+8. Fixed command !spec
+
+about:
+TriggerKill: Area where you can die.
+-------
+==========================================
+ver: GPI 14.1.3M
+-------
+changes:
+
+1. Improved logging system.
+2. Added commands: !freeze, !kgb, !whois
+3. Ranks are now distributed by level (ex: Admin=100, StaffMod=30: StaffMod cannot kick/ban Admin bc 100 > 30 (works for any int32 numbers))
+-------
+==========================================
+ver: GPI 14.2.3M
+-------
+changes:
+
+1. Added the military background system
+1.1 Added command: !mbs <kgb,mi6,cia>
+2. Added commands: !currteam (debug), !team, !ident
+-------
+==========================================
+ver: GPI 14.3.3M
+-------
+changes:
+
+1. Added dev-commands: !level, !glevel(removed)
+2. Improved commands: !report, !rank
+3. Added commands: !action, !poslist, !ac(admin-chat)
+4. Improved Logging (Ban Event)
+5. Added groups: Curator, Donater
+-------
+==========================================
+ver: GPI 14.4.3M (the biggest one for the January)
+-------
+changes:
+
+1. Improved commands !removepos & !savepos
+1.1 !savepos: improved system of saving (you cannot add already existing position)
+1.2 !removepos: Added position Whitelist (currently script only, it means you cannot delete the whitelisted positions)
+2. Removed Debug-Console message from !setpos
+3. Removed debug commands: !currteam, !mod
+4. Edited rules (added rule 5).
+5. Edited format of !level
+6. Added command: !stopserver
+7. Command !level is no longer debug command.
+8. Edited format of !discord (!dsc)
+9. Reworked and optimized command !kill (i did really good work on it)
+10. All new+old commands distributed by ranks.
+11. Added anti-same player.
+12. Improved ban hystory detection.
+13. Improved Logging (added random event log)
+14. SuperMod renamed: Helper
+
+about:
+anti-same player: Math system, get player name
+(the new one and the on the server one), if 50% or bigger
+are same as the one on the server, he won't be able to enter on the server.
+-------
+==========================================
+ver: GPI 14.5.3M pre1-c10a12
+-------
+changes:
+
+1. Added commands: !admins, !pi, !playerinfo
+2. Edited auto-message (4th message).
+-------
+==========================================
+ver: GPI 14.5.3M pre2-c51a12
+-------
+changes:
+
+1. Reworked command !help (i did really good work here too, 202 lines)
+2. Added command: !mods
+3. Fixed command: !admins
+-------
+==========================================
+ver: GPI 14.5.3M
+-------
+changes:
+
+1. Mass bug fixed command !help, !admins, !mods
+2. Added command: !unadd/!remove
+-------
+==========================================
+ver: GPI 14.6.3M pre1-c10a13
+-------
+changes:
+
+1. Fixed command !ac
+2. Added command: !groups (based on !help)
+3. Added date event.
+-------
+==========================================
+ver: GPI 14.6.3M pre2-c51a13
+-------
+changes:
+
+1. Added AFK system.
+-------
+==========================================
+ver: GPI 14.6.3M pre3-c181a13 alpha
+-------
+changes:
+
+1. temp-removed AFK system.
+-------
+==========================================
+ver: GPI 14.6.3M pre4-c44a14 beta
+-------
+changes:
+
+1. small bug-fix.
+2. Removed debugging in !help, !groups
+3. Fixed commands !h, !groups
+-------
+==========================================
+ver: GPI 14.6.3M pre5-c60a15 beta
+-------
+changes:
+
+1. Edited format of !gotopos, !level
+-------
+==========================================
+ver: GPI 14.6.3M
+-------
+changes:
+
+1. Added AFK system.
+2. Edited format of all kick/ban events.	//Anti-RageQuit fixed. (15.01.21)
+3. Mass Fixed AFK system.
+4. Added command !afk
+5. Added ping checker (sv_maxping 999 | max ping by ping checker 400)
+6. Improved AFK system.
+7. small bug-fix.
+8. Added to config: allow_afk(bool, enable or disable afk checking), afk_timeout(int32, time in seconds how long player can be afk).
+-------
+==========================================
+ver: GPI 14.7.3M
+-------
+changes:
+
+1. Added command !cfg
+2. small bug-fix.
+3. Max ping is now edditable trough from server (!cfg max_ping) and in config
+4. Mass added TriggerKill on maps: mp_shipbreaker,mp_exchange,mp_bravo,mp_alpha,mp_park,mp_village,mp_lambeth,mp_plaza2,mp_morningwood,mp_underground (13 TriggerKill)
+5. Fixed command !mbs
+6. Fixed Anti-RageQuit when kicked while afk, ban/kick event.
+7. Added random fact in AutoMessages.
+8. Fixed command !ident
+9. Fixed MBS.
+10. Fixed H-ban.
+-------
+==========================================
+ver: GPI 14.8.3M
+-------
+changes:
+
+1. Reworked Banning (all banned players are now unbanned but new banning system is better)
+2. Positions whitelist added into the config file.
+3. Added command !poswhitelist, !poswl, !seed, !generate
+4. Fixed command !help (!h)
+5. Added seed system
+6. Edited format of !vote
+
+about:
+seed: randomly generated numbers which contains information
+about nextmap, which .dspl file will be triggered, chance of nextmap
+and chance of next seed.
+-------
+==========================================
+ver: GPI 14.9.3M
+-------
+changes:
+
+1. Added groups: Dev, Host
+2. small fixes.
+-------
+==========================================
+ver: GPI 15.0.3M
+-------
+changes:
+
+1. small bug-fix.
+2. Added Anti-Camp
+3. Added dev-commands: !addkills, !setkills
+
+about:
+Anti-Camp: Work on the player after he does 24 kills,
+give time to move, if player don't - he get warn 15 secs after.
+20 secs after he get warned, if he did'nt moved - he dies. Specific area is: 4 meters around.
+-------
+==========================================
+ver: GPI 15.1.3M (r-e121a27 15.1.3)
+-------
+changes:
+
+1. Fixed Anti-RageQuit (now if infected leave and players on the server are less than 5, he wont be banned)
+2. Fixed Anti-Camp (works for 5 meters around)
+3. Removed dev-commands: !addkills, !setkills
+4. Edited format of: !generate
+5. Ranks level now provide same level: some commands cannot be executed on same level rank.
+6. Map-list is now containing 26 maps (6 default, 20 DLC)
+-------
+==========================================
+ver: GPI 15.1.3M (r-e135a27 15.1.3)
+-------
+changes:
+
+1. Changed settings of Anti-Camp: Trigger Area radius - 5 meters ; Time before get killed - 35 seconds ; time for warn - 15 seconds
+-------
+==========================================
+ver: GPI 15.1.3M (r-e151a27 15.1.3)
+-------
+changes:
+
+1. removed command !action
+-------
+==========================================
+ver: GPI 15.1.3M (r-e170a27 15.1.3)
+-------
+changes:
+
+1. Added config/server enabling ping_checker.
+-------
+==========================================
+ver: GPI 15.1.3M (r-e155a28 15.1.3)
+-------
+changes:
+
+1. Added command !freeze
+-------
+==========================================
+ver: GPI 15.1.3M (r-e131a30 15.1.3)
+-------
+changes:
+
+1. Edited Console logging
+-------
+==========================================
+ver: GPI 15.1.3M (r-e132a30 15.1.3)
+-------
+changes:
+
+1. Added command !saveplayer
+-------
+==========================================
+ver: GPI 15.1.3M (biggest for June)
+-------
+changes:
+
+1. added simple Anti-Cheat.
+2. added command: !about.
+3. smallest bug-fix.
+4. Reworked some parts in Seed System.
+-------
+==========================================
+ver: GPI 15.2.3M
+-------
+changes:
+
+1. fixed & updated Anti-cheat (v1.0.2)
+2. added command: !aimbot (i swear its only to test the anti-cheat)
+3. fixed Anti-RageQuit.
+-------
+==========================================
+ver: GPI 15.3.3M (Public Release)
+-------
+changes:
+
+1. all clan tags are now changable.
+2. Removed command !aimbot
+
+About the "Public Release":
+From this version, the script is officially released in public
+and can be used by anyone else. It also means that now, most of
+changes will be done to other users like adding localization.
+About localization: It will be officially done only on few
+more languages: English (default), Russian and French, but,
+i will allow to add own localization.
+I wont allow to add own TriggerKill on the map only because
+this is really hard to do, i don't talk about the existing
+TriggerKills, which would have to be updated as well.
+-------
+==========================================
